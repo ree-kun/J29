@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>J29</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+    </head>
+    <body>
+        <header>
+            <div class="main">
+                <nav class="for-pc">
+                    <ul>
+                        <li id="siteName">J29</li>
+                        <div id="menu"></div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="stockInfo" class="row">
+            <div id="stockMain" class="col col-md-9">
+                <div id="searchConditions"></div>
+                <div id="mainChartArea">
+                    <div id="displayChart" class="chartArea"></div>
+                </div>
+            </div>
+            <div id="brandDetail" class="col col-md-3"></div>
+        </div>
+        <script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+    </body>
+
+    <script>
+        window.onload = function() {
+            window.setTimeout(deleteVdbanner, 0)
+            function deleteVdbanner() {
+                var elem = document.getElementById('vdbanner')
+                if (elem)
+                    elem.parentNode.removeChild(elem) 
+            }
+        }
+    </script>
+</html>

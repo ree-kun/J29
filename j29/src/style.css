@@ -1,0 +1,171 @@
+/* ヘッダー */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgb(0, 63, 180);
+    border-style: outset;
+}
+
+header .main ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 45px;
+}
+
+header #siteName {
+    padding: 0 13px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #070063;
+}
+
+header #menu .wrapper {
+    display: flex;
+}
+
+header #menu .wrapper,
+header #menu .dropdown {
+    height: 100%;
+}
+
+header #menu .checkBox {
+    padding: .25em 1.5em;
+    white-space: nowrap;
+    margin: 0;
+}
+
+header .main button {
+    color: white !important;
+    border-style: none;
+    color: #000;
+    background-color: transparent;
+    height: 100%;
+}
+
+header .main button:hover {
+    background-color: #070063;
+}
+
+/* 株価情報領域 */
+#stockInfo {
+    padding: 10px;
+    margin: 0;
+    margin-top: 50px;
+    left: 10px;
+    width: 100%;
+}
+
+/* メインチャート領域 */
+#mainChartArea .chart {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+}
+
+#mainChartArea .chart .axis {
+    display: inline-block;
+}
+
+#mainChartArea .chart .axis svg {
+    overflow: visible !important;
+}
+
+#mainChartArea #supportLinesWrapper {
+    position: absolute;
+    top: 15px;
+    bottom: 20px;
+    width: 100%;
+}
+
+#mainChartArea #supportLines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* z-index: 1; */
+}
+
+#mainChartArea #supportLines #horizontalLine {
+    position: absolute;
+    border-bottom: solid 2px #CCCCCC;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+}
+
+#mainChartArea #supportLines #verticalLine {
+    position: absolute;
+    border-right: solid 2px #CCCCCC;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+}
+
+#mainChartArea #supportLinesMouseMove {
+    position: absolute;
+    top: 15px;
+    bottom: 20px;
+    pointer-events: none;
+}
+
+#mainChartArea #supportLinesMouseMove > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: auto;
+}
+
+#mainChartArea .chart .figure .minorGrildline {
+    top: 15px;
+    bottom: 20px;
+    /* background-color: brown; */
+    position: absolute;
+    border-right: 1px solid #CCCCCC;
+}
+
+#mainChartArea .chart .figure {
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    right: 0;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+#mainChartArea #brand {
+    text-align: center;
+}
+
+#mainChartArea #brand h1 {
+    font-size: 55px;
+    letter-spacing: 0.2em;
+    margin-left: 0.2em;
+}
+
+/* 取引詳細チャート */
+#tradeDetailChart .chart {
+    height: 200px;
+}
+
+/* 銘柄詳細 */
+#brandDetail {
+   height: 830px;
+   bottom: 0;
+}
+
+.scrollable {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
